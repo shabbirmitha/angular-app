@@ -1,0 +1,18 @@
+<div *ngIf="githubRepos" class="container text-center">
+  <div class="row row-cols-2">
+    <div *ngFor="let repo of githubRepos | paginate:{ itemsPerPage:10, currentPage:page, totalItems:totalRepos}">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <a [href]="repo.html_url" target="_blank" style="text-decoration: none; font-family: monospace; font-size: larger; color: white;" class="card-title">{{repo.name}}</a>
+            <p class="card-text">{{repo.description}}</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="pago">
+  <pagination-controls class="my-pagination" (pageChange)="page=$event"></pagination-controls>
+</div>
+
+<app-pagination [githubRepos]="githubRepos" ></app-pagination>

@@ -1,0 +1,29 @@
+.pago{
+    margin-top: 10px;
+}
+
+.card{
+    background-color: #1e2a47;
+    color: white;
+    text-align: left;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card-text{
+    font-size: small;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: #1e2a47;
+  }
+
+
+.my-pagination ::ng-deep .ngx-pagination .disabled{
+    color: #cacaca00;
+}
+

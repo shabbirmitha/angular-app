@@ -1,0 +1,20 @@
+*{
+    display: grid;
+}
+
+.navbar{
+    background-color: #1e2a47;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    margin-bottom: 25px;
+}
+
+.head{
+    position:relative;
+    font-size: 15px;
+    font-weight: bold;
+
+}

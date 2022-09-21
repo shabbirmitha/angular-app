@@ -1,0 +1,18 @@
+.search{
+    width: auto;
+    
+}
+
+.card{
+    background-color: #1e2a47;
+    color: white;
+}
+
+.card-title{
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.card-text{
+    color: white;
+}

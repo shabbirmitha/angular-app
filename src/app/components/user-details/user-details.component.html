@@ -1,0 +1,31 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+<div class="mb-2 search">
+    <form class="d-flex" role="search" (submit)="searchUser()">
+        <div class="input-group me-2">
+          <span class="input-group-text" style=" background-color: #1e2a47; color: #fff;;" id="basic-addon1">@</span>
+          <input [(ngModel)]="githubUserName" name="User" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <button class="btn btn-outline-light" value="search" type="submit">Search</button>
+      </form>
+ </div>
+ 
+ <div *ngIf="githubProfile" class="card mb-3 " id="cardop" >
+    <div class="row g-0">
+     
+      <div class="col m-2">
+        <img [src]="githubProfile.avatar_url" class="img-fluid mx-auto d-block rounded-circle" style="height: 100px;" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{githubProfile.name}}</h5>
+          <p class="card-text">{{githubProfile.bio}}</p>
+          <p class="card-text"><small class="text-muted"><img src="/assets/icon-location.svg" alt=""> : {{githubProfile.location}}</small></p>
+          <p class="card-text"><small class="text-muted"><img src="/assets/icon-twitter.svg" alt=""> : {{githubProfile.twitter_username}}</small></p>
+          <a [href]="githubProfile.html_url" target="_blank" style="text-decoration: none;" class="card-text"><small class="text-muted"><img src="/assets/icon-website.svg" alt=""> : {{githubProfile.html_url}}</small></a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-repo [githubRepos]="githubRepos" [totalRepos]="totalRepos" [githubLang]="githubLang"></app-repo>
